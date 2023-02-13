@@ -1,23 +1,150 @@
-html {
-    font-size: 62.5%;
-    scroll-behavior:smooth;
-}
+    html {
+        font-size: 62.5%;
+        scroll-behavior:smooth;
+    }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-image:linear-gradient(90deg,RGBA(11, 9, 10, 1)50%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
-}
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: blue;
+        font-family: 'Quicksand', sans-serif;
+    }
 
-:root{
-    --dark:RGBA(11, 9, 10, 1);
-    --medium-dark:RGBA(40, 40, 40, 1);
-    --blue-deep:RGBA(53, 53, 80, 1);
-    --dark-purple:RGBA(70, 37, 80, 1);
-    --gold:RGBA(234, 194, 61, 1);
-    --silver:RGBA(209, 209, 209, 1);
-    --black:#000;
-    --white:#fff;
-}
+    :root{
+        --dark:RGBA(11, 9, 10, 1);
+        --medium-dark:RGBA(40, 40, 40, 1);
+        --blue-deep:RGBA(53, 53, 80, 1);
+        --dark-purple:RGBA(70, 37, 80, 1);
+        --silver:RGBA(209, 209, 209, 1);
+        --black:#000;
+        --white:#fff;
+        --main-background:
+    }
+    /*navbar style --------------------------------------------------------*/
+    .navbar{
+        position: fixed;
+        top: -1px;
+        width: 100%;
+    }
 
+    .nav-box{
+        background-image:linear-gradient(90deg,RGBA(11, 9, 10, 1)50%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
+        box-shadow: 1px 2px 1px 1px var(--white);
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+
+        align-items: center;
+        list-style: none;
+    }
+
+    .list-element a {
+        text-decoration: none;
+        color: var(--silver);
+        padding: 2.4rem;
+
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        width: 10rem;
+        height: 6rem;
+        object-fit: cover;
+    }
+
+
+    .list-element:nth-child(1) a:hover,
+    .list-element:nth-child(2) a:hover,
+    .list-element:nth-child(4) a:hover,
+    .list-element:nth-child(5) a:hover
+    {
+        color: var(--dark);
+        background-color: #fff;
+        transition: .3s;
+    }
+
+
+    /*dropdown style---------------------------------------------------------*/
+    .dropdown{
+        display: none;
+    }
+
+    .svg {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+    }
+
+    /*Responsive-----------------------------------------------------------*/
+    @media(max-width:600px){
+
+        .nav-list .list-element:nth-child(1),
+        .nav-list .list-element:nth-child(2),
+        .nav-list .list-element:nth-child(4),
+        .nav-list .list-element:nth-child(5)
+         {
+            display: none;
+         }
+        
+         .nav-list {
+            justify-content: space-between;
+         }
+         /*dropdown @media-------------------------------------------------*/
+        .dropdown{
+            display: block;
+            position: relative;
+            display: inline-block;
+            left: -40px;
+        }
+    
+        .drop-btn {
+            background-color: var(--black);
+            border: none solid var(--white);
+            cursor: pointer;
+            transition: .5s;
+        }
+    
+        .drop-content {
+            display: none;
+            margin-top: 9px;
+            position: absolute;
+            background-image:linear-gradient(90deg,RGBA(11, 9, 10, 1)45%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown:hover .drop-btn {
+            transform: rotate(90deg);
+        }
+    
+        .drop-content a{
+            display: block;
+            padding: 12px 16px;
+            width: 40rem;
+            
+            color: var(--silver);
+            text-decoration: none;
+            text-transform: uppercase;
+            
+        }
+
+        .dropdown:hover .drop-content{
+            display: block;
+        }
+
+        .drop-content a:hover {
+            background-color: var(--dark-purple);
+        }
+        .logo{
+            width: 8rem;
+            height: 4rem;
+        }
+
+        .img-element{
+            order: 1;
+        }
+    }
