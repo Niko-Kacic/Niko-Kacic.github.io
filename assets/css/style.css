@@ -1,27 +1,462 @@
-html {
-    font-size: 62.5%;
-    scroll-behavior:smooth;
-}
+    html {
+        font-size: 62.5%;
+        scroll-behavior:smooth;
+    }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-image:linear-gradient(90deg,RGBA(11, 9, 10, 1)50%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
-}
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+        color: var(--silver);
+        background-image:linear-gradient(90deg,RGBA(11, 9, 10, 1)50%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
+    }
 
-:root{
-    --dark:RGBA(11, 9, 10, 1);
-    --medium-dark:RGBA(40, 40, 40, 1);
-    --blue-deep:RGBA(53, 53, 80, 1);
-    --dark-purple:RGBA(70, 37, 80, 1);
-    --gold:RGBA(234, 194, 61, 1);
-    --silver:RGBA(209, 209, 209, 1);
-    --black:#000;
-    --white:#fff;
-}
+    :root{
+        --dark:RGBA(11, 9, 10, 1);
+        --medium-dark:RGBA(40, 40, 40, 1);
+        --blue-deep:RGBA(53, 53, 80, 1);
+        --dark-purple:RGBA(70, 37, 80, 1);
+        --silver:RGBA(209, 209, 209, 1);
+        --black:#000;
+        --white:#fff;
+        --main-background:
+    }
+    /*navbar style --------------------------------------------------------*/
+    .navbar{
+        position: fixed;
+        top: -1px;
+        width: 100%;
+    }
 
 
 @media(max-width:700px){
 
+}
+    .nav-box{
+        background-image:linear-gradient(90deg,RGBA(11, 9, 10, 1)50%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
+        box-shadow: 1px 2px 1px 1px var(--white);
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+
+        align-items: center;
+        list-style: none;
+    }
+
+    .list-element a {
+        text-decoration: none;
+        color: var(--silver);
+        padding: 2.4rem;
+
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        width: 10rem;
+        height: 6rem;
+        object-fit: cover;
+    }
+
+
+    .list-element:nth-child(1) a:hover,
+    .list-element:nth-child(2) a:hover,
+    .list-element:nth-child(4) a:hover,
+    .list-element:nth-child(5) a:hover
+    {
+        color: var(--dark);
+        background-color: #fff;
+        transition: .3s;
+    }
+    .div-box {
+        height: 100px;
+    }
+
+    /*dropdown style-------------------------------------------------------*/
+    .dropdown{
+        display: none;
+    }
+
+    .svg {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+    }
+
+    /*body style-----------------------------------------------------------*/
+
+    .main-body {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .principal-tittle{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .text-article{
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .principal-tittle, .cocktail-tittle{
+        text-align: center;
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        background-color: inherit;
+        color: var(--white);
+    }
+
+    .subtittle {
+        text-align: center;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+
+    .figure-article {
+        background-image:linear-gradient(120deg,RGBA(11, 9, 10, 1)50%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
+        width: 40%;
+        float: right;
+        border: none solid var(--medium-dark);
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 1px 2px 6px var(--white);
+    }
+
+    .img-article {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .picture-caption {
+        padding: 1rem;
+        font-style: italic;
+    }
+    /*Gin tittles gallery style----------------------------------------------------*/
+
+
+    .galerry-subtittle , .cocktail-subtittle{
+        text-align: center;
+        font-size: 2.2rem;
+        color: var(--silver);
+        text-transform: uppercase;
+        padding:1rem 0;
+    }
+
+    .gallery-description{
+        color: var(--silver);
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    /*Gin gallery style----------------------------------------------------*/
+  
+    .box-gallery {
+        display: flex;
+        gap:0 1.5rem;
+        flex-wrap: nowrap;
+    }
+    
+    .box-gin {
+        border-radius: 8px;
+        width: 25%;
+    }
+
+    .gallery-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    /*gin card-------------------------------------------------------------*/
+    .box-info{
+        padding: 2rem;
+        font-size: 12px;
+    }
+
+    .subtittle-3 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .subtittle-4 {
+        padding: 0 2rem;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    /*cocktail gallery style-----------------------------------------------*/
+
+    .cocktail-box {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 2rem;
+        border: 1px solid white;
+        border-radius: 8px;
+        box-shadow: 1px 2px 15px var(--silver);
+        background-color: var(--black);
+    }
+
+    .cocktail-img {
+        background-color: rgb(0, 0, 0);
+        width: 33%;
+    }
+
+    .cocktail-img img {
+        width: 100%;
+        height: 350px;
+        object-fit: contain;   
+    }
+    
+    .cocktail-recipe {
+        width: 33%;
+        padding: 2rem;
+        font-size: 12px;
+    }
+
+    .cocktail-history {
+        width: 33%;
+        padding: 2.5rem;
+        font-size: 14px;
+
+        margin-top: 45px;
+    }
+
+    .cocktail-box:nth-child(2n+1) .cocktail-img
+    {
+        order: 3;
+    }
+
+    .cocktail-box:nth-child(2n+1) .cocktail-recipe
+    {
+        order: 2;
+    }
+
+
+    /*footer style---------------------------------------------------------*/
+
+   .footer {
+        margin-left:19rem;
+        width: 80%;
+        height: 55rem;
+
+        font-size: 3rem;
+   }
+
+   .footer-tittle h2 {
+        margin-top: 12rem;
+        text-align: center;
+        text-transform: uppercase;
+   }
+
+   .footer-list {
+        text-align: center;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        
+   }
+
+   .footer-list li {
+        padding: 3rem;
+        margin-top: 5rem;
+   }
+
+   .footer-list a {
+        text-decoration: none;
+        text-transform: capitalize;
+        padding: 1rem;
+        
+        color: var(--silver);
+        border: 1px solid white;
+        border-radius: 5px;
+   }
+
+   .footer a:hover {
+        background-color: var(--white);
+        color: var(--black);
+   }
+
+   .disclaimer {
+        text-align: center;
+   }
+
+    /*Responsive-----------------------------------------------------------*/
+    @media(max-width:900px){
+        .box-gallery {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    
+    
+    @media(max-width:600px){
+
+        .nav-list .list-element:nth-child(1),
+        .nav-list .list-element:nth-child(2),
+        .nav-list .list-element:nth-child(4),
+        .nav-list .list-element:nth-child(5)
+         {
+            display: none;
+         }
+        
+         .nav-list {
+            justify-content: space-between;
+         }
+         /*dropdown @media-------------------------------------------------*/
+        .dropdown{
+            display: block;
+            position: relative;
+            display: inline-block;
+            left: -40px;
+        }
+    
+        .drop-btn {
+            background-color: rgba(0, 0, 0, 0);
+            border: none solid var(--white);
+            cursor: pointer;
+            transition: .5s;
+        }
+    
+        .drop-content {
+            display: none;
+            margin-top: 9px;
+            position: absolute;
+            background-image:linear-gradient(90deg,RGBA(11, 9, 10, 1)45%,RGBA(40, 40, 50, 1),RGBA(70, 37, 80, 1));
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown:hover .drop-btn {
+            transform: rotate(90deg);
+        }
+    
+        .drop-content a{
+            display: block;
+            padding: 12px 16px;
+            width: 40rem;
+            
+            color: var(--silver);
+            text-decoration: none;
+            text-transform: uppercase;
+            
+        }
+
+        .dropdown:hover .drop-content{
+            display: block;
+        }
+
+        .drop-content a:hover {
+            background-color: var(--dark-purple);
+        }
+        .logo{
+            width: 8rem;
+            height: 4rem;
+        }
+
+        .img-element{
+            order: 1;
+        }
+        /*Body query style*/
+        
+        .main-body{
+            width: 90%;
+        }
+
+        .text-article{
+            text-align:start;
+        }
+
+        .figure-article {
+            width: 100%;
+            float: none;
+            margin: 0 auto;
+        }
+        /*gin gallery media---------------------------------------------*/
+        .box-gallery {
+            display: block;
+        }
+
+        .box-gin {
+            width: 100%;
+        }
+
+        .subtittle-3 {
+            text-align: center;
+        }
+        
+        .gallery-img{
+            width: 330px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /*cocktail responsive---------------------------------------------*/
+
+        .cocktail-box {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid white;
+            background-color: var(--black);
+        }
+    
+        .cocktail-img {
+            background-color: rgb(0, 0, 0);
+            width: 50%;
+            
+            margin-left: 8rem;        
+        }
+    
+        .cocktail-img img {
+            width: 100%;
+            height: 350px;
+            object-fit:contain;   
+        }
+        
+        .cocktail-recipe {
+            width: 100%;
+            padding: 1.6rem;
+            font-size: 14px;
+
+            margin-top: -35px;
+        }
+    
+        .cocktail-history {
+            width: 100%;
+            padding: 1.6rem;
+            font-size: 14px;
+    
+            margin-top: -35px
+        }
+        
+        .cocktail-box:nth-child(2n+1) .cocktail-img
+        {
+            order: 0;
+        }
+    
+        .cocktail-box:nth-child(2n+1) .cocktail-recipe
+        {
+            order: 1;
+        }
+
+        .cocktail-box:nth-child(2n+1) .cocktail-history
+        {
+            order: 3;
+        }
+        
+        /*footer query style----------------------------------------------*/
+        .footer {
+            margin-left: 4rem;
+        }
+
+        .footer-list {
+            display: block;
+            font-size: 2rem;
+
+        }
+    }
 }
